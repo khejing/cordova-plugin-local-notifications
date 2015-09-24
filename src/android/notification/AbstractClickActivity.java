@@ -95,9 +95,7 @@ abstract public class AbstractClickActivity extends Activity {
                 .getPackageManager()
                 .getLaunchIntentForPackage(pkgName);
 
-        String option = notification.toString();
-        Log.i("ClickActivity", "notification to string is "+option);
-        intent.putExtra(Options.EXTRA, option);
+        intent.putExtra(Options.EXTRA, notification.toString());
 
         intent.addFlags(
                 Intent.FLAG_ACTIVITY_REORDER_TO_FRONT | Intent.FLAG_ACTIVITY_SINGLE_TOP);
